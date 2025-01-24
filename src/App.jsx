@@ -7,6 +7,7 @@ import { InteractionType } from '@azure/msal-browser'
 
 function App() {
   // Trigger MSAL authentication with redirect method
+  
   useMsalAuthentication(InteractionType.Redirect)
 
   const [m_strUser, setm_steUser] = React.useState("")
