@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -7,11 +7,10 @@ import { InteractionType } from '@azure/msal-browser'
 
 function App() {
   // Trigger MSAL authentication with redirect method
-  
   useMsalAuthentication(InteractionType.Redirect)
 
-  const [m_strUser, setm_steUser] = React.useState("")
-  const [count, setCount] = React.useState(0)
+  const [m_strUser, setm_steUser] = useState("")
+  const [count, setCount] = useState(0)
 
   const { accounts } = useMsal();  // Destructure 'accounts' from useMsal
 
